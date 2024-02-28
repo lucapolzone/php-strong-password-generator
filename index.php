@@ -12,7 +12,7 @@ if ($form_sent) {
   //qui c'era la funzione
 
   $password = random_password($password_length);
-  echo $password;
+  // echo $password;
 
 }
 
@@ -41,8 +41,9 @@ if ($form_sent) {
     <h2 class="text-center">Genera una password sicura</h2>
     <div class="row mt-3">
       <div class="col-12">
-        <div class="alert alert-success opacity-0">
-          <p>&nbsp;</p>
+        <div class="alert alert-success <?= $form_sent ? 'opacity-100' : 'opacity-0'?>">
+          <!-- <p>&nbsp;</p> -->
+          <h3><?= isset($password) ? 'La tua password è <span class= "fw-bold">'. $password . '</span>' : '&nbsp;' ?></h3>
         </div>
       </div>
       <div class="col-12">

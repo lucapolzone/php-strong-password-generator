@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/logic/functions.php';
+
 $form_sent = !empty($_GET);
 
 if ($form_sent) {
@@ -7,39 +9,10 @@ if ($form_sent) {
 
   $password_length = $_GET['password-length'];
 
-  function random_password($password_length) {
-
-    //lettere minuscole
-    $letters = 'abcdefghijklmnopqrstuvwxyz';
-    //lettere maiuscole
-    $up_letters = strtoupper($letters);
-    //simboli
-    $symbols = '!"#$%&\'()*+<=>?@[\\]^_`{|}~';
-    //numeri
-    $numbers = '0123456789';
-
-    $generated_password = '';
-
-
-    while (strlen($generated_password) < $password_length) {
-      //concatenazione di tutte le stringhe
-      $all_characters = $letters . $up_letters . $symbols . $numbers;
-      // echo $all_characters;
-
-      //prendo un carattere random da 0 all'ultimo indice valido
-      $random_character = $all_characters[rand(0, strlen($all_characters) - 1)];
-
-      $generated_password .= $random_character;;
-    }
-
-    return $generated_password;
-
-  }
-
+  //qui c'era la funzione
 
   $password = random_password($password_length);
   echo $password;
-
 
 }
 

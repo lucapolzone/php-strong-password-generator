@@ -13,6 +13,30 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
+  <div class="container mt-5">
+    <h1 class="fw-bold text-center">Strong Password Generator</h1>
+    <h2 class="text-center">Genera una password sicura</h2>
+    <div class="row mt-3">
+      <div class="col-12">
+        <div class="alert alert-success opacity-0">
+          <p>&nbsp;</p>
+        </div>
+      </div>  
+      <div class="col-12">
+        <div class="card mt-1">
+          <div class="p-4">
+            <form>
+              <div class="mb-4">
+                <label for="inputPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword">
+              </div>
+              <button type="submit" class="btn btn-primary">INVIA</button>
+              <button type="reset" class="btn btn-warning">RESET</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,3 +1,17 @@
+<?php
+
+  $form_sent = !empty($_GET);
+
+  if ($form_sent) {
+    var_dump($_GET);
+  }
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,10 +39,10 @@
       <div class="col-12">
         <div class="card mt-1">
           <div class="p-4">
-            <form>
+            <form method="GET">
               <div class="mb-4">
                 <label for="inputPassword" class="form-label">Password</label>
-                <input type="password" class="form-control" id="inputPassword">
+                <input type="number" min="3" value="3" name="password-length" class="form-control" id="inputPassword">
               </div>
               <button type="submit" class="btn btn-primary">INVIA</button>
               <button type="reset" class="btn btn-warning">RESET</button>
